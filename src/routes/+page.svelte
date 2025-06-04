@@ -108,8 +108,8 @@
             <div class="absolute overflow-hidden w-full h-full">
                 <Triangles fill="#e9e4e4"/>
             </div>
-            <div class="{screenType != ScreenType.Portrait && "collapse"} absolute w-full h-full bg-cover bg-no-repeat pointer-events-none bg-[image:url('./bg-limonene-v.webp')] bg-[position:center_70%]"></div>
-            <div class="{screenType == ScreenType.Portrait && "collapse"} absolute w-full h-full bg-cover bg-no-repeat pointer-events-none bg-[image:url('./bg-limonene.webp')]   bg-[position:70%_center]"></div>
+            <div class="{screenType != ScreenType.Portrait && "collapse"} absolute w-full h-full bg-cover bg-no-repeat pointer-events-none bg-[image:url('/bg-limonene-v.webp')] bg-[position:center_70%]"></div>
+            <div class="{screenType == ScreenType.Portrait && "collapse"} absolute w-full h-full bg-cover bg-no-repeat pointer-events-none bg-[image:url('/bg-limonene.webp')]   bg-[position:70%_center]"></div>
             <div class="relative w-full h-full">
                 <div class="absolute flex flex-col w-full h-full pointer-events-none p-4">
                     <h1 class="text-[clamp(3rem,1.7667rem+5.3333vw,4rem)] font-thin tracking-widest">{namesArray[0]}</h1>
