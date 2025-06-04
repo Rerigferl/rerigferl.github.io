@@ -76,9 +76,10 @@
         container?.addEventListener("touchstart", e => lastOffset = e.touches[0].clientY);
         container?.addEventListener("touchmove", onWheel);
         
-        if (curtain != null)
-            curtain.style = `background-color: transparent; pointer-events: none`;
-
+        setTimeout(() => {
+            if (curtain != null)
+                curtain.style = `background-color: transparent; pointer-events: none`;
+        }, 10);
         title = namesArray[0];
     });
 
