@@ -15,10 +15,13 @@
     let index = $state(0);
     let namesArray = $state(([["Gomorroth", 0.1], ["Numeira", 0.5],[ "Rerigferl", 0.5], ["Rinna Koharu", 0.5], ["Xhergractferl", 0.5], ["Ashley Scarlet", 0.6], ["Enxhelious", 0.6], ["Kujira Kujime", 0.9], ["Aetiocetus", 0.9] ] as [string, number][]).sort((x, y) => (Math.random() + x[1]) - (Math.random() + y[1])).map(x => x[0]));
 
-    let title = $state(".");
-
+    let title = $state("\u200b");
+    let lastIndex = 0;
     $effect(() => {
+        if (lastIndex == index)
+            return;
         goto(`#${container?.children[index].id}`, { replaceState: true });
+        lastIndex = index;
     });
 
     let ticking = false;
@@ -61,11 +64,11 @@
             if (container == null)
                 return;
             let i = index;
-            if (delta < -10)
+            if (delta < -5)
             {
                 i--;
             }
-            else if (delta > 10) {
+            else if (delta > 5) {
                 i++;
             }
             index = Math.max(0, Math.min(i, container.children.length - 1));
