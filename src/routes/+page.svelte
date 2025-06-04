@@ -76,9 +76,10 @@
         container?.addEventListener("touchstart", e => lastOffset = e.touches[0].clientY);
         container?.addEventListener("touchmove", onWheel);
         
+        setTimeout(() => {
         if (curtain != null)
             curtain.style = `background-color: transparent; pointer-events: none`;
-
+        }, 500);
         title = namesArray[0];
     });
 
@@ -95,7 +96,6 @@
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight/>
-
 <svelte:head>
     <title>{title}</title>
     <meta property="og:title" content={title} />
