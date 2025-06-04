@@ -76,10 +76,9 @@
         container?.addEventListener("touchstart", e => lastOffset = e.touches[0].clientY);
         container?.addEventListener("touchmove", onWheel);
         
-        setTimeout(() => {
         if (curtain != null)
             curtain.style = `background-color: transparent; pointer-events: none`;
-        }, 500);
+
         title = namesArray[0];
     });
 
@@ -133,6 +132,6 @@
         {/each}
     </div>
 
-    <div class="pointer-events-auto absolute w-full h-full bg-white transition-colors duration-500" bind:this={curtain}></div>
+    <div class="pointer-events-auto absolute w-full h-full bg-white transition-colors delay-200 duration-500" bind:this={curtain}></div>
 
 </div>

@@ -9,5 +9,5 @@
     <meta name="twitter:title" content="{page.status} " />
 </svelte:head>
 
-<div class="w-full h-full pointer-events-none relative vigenette bg-cover bg-[image:url('./ogp.webp')]">
+<div class="w-full h-full pointer-events-none relative vigenette bg-cover bg-[image:url('https://rerigferl.github.io/ogp.webp')]">
 </div>
